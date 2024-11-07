@@ -1,0 +1,62 @@
+#include <stdio.h>
+int main()
+{
+	int x,y;
+	int ans;
+	
+	printf("WELCOME TO MY CALCULATOR PROJECT\n\n");
+	
+	printf("You can select 2 numbers.\n\n");
+	
+	printf("Choose a number x: ");
+	scanf("%d",&x);
+	printf("\n");
+	
+	printf("Choose a number y: ");
+	scanf("%d",&y);
+	printf("\n");
+	printf("You have x: %d and y: %d\n\n", x,y);
+	
+	printf("1.Add\n");
+	printf("2.Subtract\n");
+	printf("3.Multiply\n");
+	printf("4.Divide\n");
+	printf("0.EXIT\n\n");
+	
+	do
+	{
+		printf("Choose an operation: ");
+	    scanf("%d", &ans);
+	    printf("\n");
+	    
+	    if (ans<0 || ans>4 )
+	    	printf("Wrong Input! ");
+	    	
+	    else if (ans==0)
+		{ 
+	    	printf("Exiting...");
+	    	return 0;
+	    }
+	    
+        else if (ans==1)
+		    printf("%d+%d=%d\n\n", x,y,x+y);
+		    
+	    else if (ans==2)
+	    	printf("%d-%d=%d\n\n", x,y,x-y);
+	    	
+		else if (ans==3)
+			printf("%d*%d=%d\n\n", x,y,x*y);
+			
+		else if (ans==4)
+		{
+			while (y==0)
+			{
+				printf("You can not divide with 0. Please select a new number y: ");
+				scanf("%d",&y);
+				printf("\n");
+			}
+			
+			printf("%d/%d=%d\n\n", x,y,x/y);
+		}
+	}while (ans=!0);
+}
