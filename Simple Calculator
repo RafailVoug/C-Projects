@@ -25,38 +25,38 @@ int main()
 	
 	do
 	{
-		printf("Choose an operation: ");
+	    printf("Choose an operation: ");
 	    scanf("%d", &ans);
 	    printf("\n");
 	    
 	    if (ans<0 || ans>4 )
-	    	printf("Wrong Input! ");
+	    	   printf("Wrong Input! ");
 	    	
 	    else if (ans==0)
-		{ 
-	    	printf("Exiting...");
-	    	return 0;
+	    { 
+	    	   printf("Exiting...");
+	    	   return 0;
 	    }
 	    
-        else if (ans==1)
-		    printf("%d+%d=%d\n\n", x,y,x+y);
+            else if (ans==1)
+		   printf("%d+%d=%d\n\n", x,y,x+y);
 		    
 	    else if (ans==2)
-	    	printf("%d-%d=%d\n\n", x,y,x-y);
+	    	   printf("%d-%d=%d\n\n", x,y,x-y);
 	    	
-		else if (ans==3)
-			printf("%d*%d=%d\n\n", x,y,x*y);
+	    else if (ans==3)
+		   printf("%d*%d=%d\n\n", x,y,x*y);
 			
-		else if (ans==4)
+	    else if (ans==4)
 		{
-			while (y==0)
+		   while (y==0)
 			{
 				printf("You can not divide with 0. Please select a new number y: ");
 				scanf("%d",&y);
 				printf("\n");
 			}
 			
-			printf("%d/%d=%d\n\n", x,y,x/y);
+		   printf("%d/%d=%d\n\n", x,y,x/y);
 		}
 	}while (ans=!0);
 }
